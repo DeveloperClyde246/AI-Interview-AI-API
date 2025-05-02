@@ -13,7 +13,7 @@ import librosa
 st.set_page_config(layout="wide")
 st.title("AI Interview Evaluation Dashboard (from JSON)")
 
-# 1️⃣ Let the user enter your API URL and upload a file
+# 1️. Let the user enter your API URL and upload a file
 api_url = st.text_input("Analysis API endpoint", "http://localhost:5001/analyze")
 uploaded_file = st.file_uploader("Upload your video/audio file", type=["mp4","avi","mov","mkv","mp3","wav"])
 
