@@ -13,12 +13,12 @@ import librosa
 st.set_page_config(layout="wide")
 st.title("AI Interview Evaluation Dashboard (from JSON)")
 
-# 1️. Let the user enter your API URL and upload a file
+# 1️. Let the user enter API URL and upload a file
 api_url = st.text_input("Analysis API endpoint", "http://localhost:5001/analyze")
 uploaded_file = st.file_uploader("Upload your video/audio file", type=["mp4","avi","mov","mkv","mp3","wav"])
 
 if api_url and uploaded_file:
-    # POST to your Flask API
+    # POST to Flask API
     with st.spinner("Sending to analysis API…"):
         files = {"file": (uploaded_file.name, uploaded_file.getvalue())}
         resp = requests.post(api_url, files=files)
