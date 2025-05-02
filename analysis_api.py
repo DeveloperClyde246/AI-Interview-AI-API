@@ -1,4 +1,4 @@
-# app.py
+
 import os
 import sys
 import tempfile
@@ -9,12 +9,12 @@ import langcodes
 from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
 
-# add your module paths
+# add module paths
 sys.path.append(os.path.join(os.path.dirname(__file__), 'tone_analysis_dashboard'))
 sys.path.append(os.path.join(os.path.dirname(__file__), 'speech_score'))
 sys.path.append(os.path.join(os.path.dirname(__file__), 'stress_analysis_refactored'))
 
-# imports from your custom modules
+# imports from custom modules
 from preprocess_function import (
     extract_audio, preprocess_audio, predict_emotion,
     predict_fluency_level, get_emotion_interview_score,
